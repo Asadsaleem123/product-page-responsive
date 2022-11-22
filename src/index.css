@@ -1,0 +1,466 @@
+@import url(https://fonts.googleapis.com/css?family=Kumbh+Sans);
+
+:root {
+  --navbarWidth: 1100px;
+  --mainWidth: 1000px;
+  --amountContWidth: 140px;
+  --buyButtonWidth: 280px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans';
+  padding: 0;
+  margin: 0;
+  transition: all 0.1s;
+}
+
+.App {
+  position: relative;
+  z-index: 0;
+}
+
+header {
+  width: var(--navbarWidth);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  height: 90px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin: auto;
+}
+
+.logosvg {
+  height: 40%;
+  width: auto;
+  margin: auto;
+}
+
+.navButtons a {
+  text-decoration: none;
+  color: hsl(219, 9%, 45%);
+  font-size: 1.4rem;
+  font-weight: 400;
+  transition: all 0.25s;
+  height: fit-content;
+  margin: auto;
+}
+
+.Main {
+  margin: 50px auto 0 auto;
+  width: var(--mainWidth);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navButtons a:hover {
+  color: aqua;
+}
+
+.navButtons a:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.navButtons {
+  margin-left: 5rem;
+  display: flex;
+}
+
+.cartLogo {
+  height: 40%;
+  width: auto;
+  margin: auto 30px auto 0;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 90%;
+  width: auto;
+}
+
+.ThumbnailsCont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.InfoAndCart {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.InfoAndCart p {
+  font-size: 1.3rem;
+  color: hsl(219, 9%, 45%);
+}
+
+.sneakerComp {
+  color: rgb(255, 125, 26);
+}
+
+.marginable {
+  margin-bottom: 20px;
+}
+
+.ImagesDisplay {
+  width: 50%;
+}
+
+.currentImageDisplayed {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.ThumbnailsCont {
+  width: 80%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ThumbnailsCont img {
+  width: 20%;
+  border-radius: 12px;
+  transition: all 0.1s;
+}
+
+.ThumbnailsCont img:not(.ThumbIsClicked) {
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.ThumbnailsCont img:hover:not(.ThumbIsClicked) {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.ThumbIsClicked {
+  opacity: 0.5;
+  border: 1px solid hsl(26, 100%, 55%);
+  cursor: default;
+}
+
+.ThumbIsClicked:hover {
+  cursor: default;
+}
+
+.ThumbnailsCont img:hover {
+  opacity: 0.5;
+}
+
+.sneakerName {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.newPriceInfo {
+  display: flex;
+}
+
+.newPriceInfo h1 {
+  margin-right: 20px;
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+.newPriceInfo h2 {
+  color: hsl(43, 86%, 48%);
+  background-color: rgba(255, 184, 41, 0.25);
+  height: fit-content;
+  padding: 2px 5px 2px 5px;
+  border-radius: 6px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.cartFunctionality {
+  display: flex;
+}
+
+.amountCont {
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(223, 64%, 98%);
+  width: var(--amountContWidth);
+  height: 40px;
+  border-radius: 10px;
+}
+
+.amount {
+  font-size: 2rem;
+  display: block;
+  height: 25px;
+  margin: auto 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+#plus {
+  height: 12px;
+  width: 12px;
+  color: hsl(26, 100%, 55%);
+  margin: auto 10px auto 0;
+  transition: all 0.25s;
+}
+
+#minus {
+  height: 4px;
+  width: 12px;
+  color: hsl(26, 100%, 55%);
+  margin: auto 0 auto 10px;
+  transition: all 0.25s;
+}
+
+
+.amountCont img:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+.buyButton {
+  display: flex;
+  justify-content: center;
+  border: none;
+  background-color: hsl(26, 100%, 55%);
+  border-radius: 10px;
+  width: var(--buyButtonWidth);
+  height: 40px;
+  transition: 0.25s;
+}
+
+.buyButton:hover {
+  background-color: hsl(40, 100%, 58%);
+  cursor: pointer;
+}
+
+.buyButton span {
+  display: block;
+  margin: auto 0;
+  margin-left: 20px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.buyButton img {
+  margin: auto 0;
+  height: 50%;
+  width: auto;
+}
+
+.oldprice {
+  color: rgb(183, 183, 183);
+  text-decoration: line-through;
+}
+
+/* Cloaked image display */
+.CloakedImageDisplay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 100;
+  transition: all 0.5s;
+}
+
+.Cloaked {
+  display: none;
+}
+
+.ImagesDisplayCloaked {
+  width: 45%;
+  margin: auto;
+}
+
+.clickableMainImage:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1120px) {
+  :root {
+    --navbarWidth: 1000px;
+    --mainWidth: 900px;
+  }
+
+  .InfoAndCart {
+    width: 45%;
+  }
+
+  .ImagesDisplay {
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  :root {
+    --navbarWidth: 95%;
+    --mainWidth: 80%;
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  :root {
+    --navbarWidth: 900px;
+    --mainWidth: 800px;
+  }
+
+  .ImagesDisplayCloaked {
+    width: 60%;
+  }
+
+  .InfoAndCart {
+    width: 40%;
+  }
+
+  .ImagesDisplay {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  :root {
+    --navbarWidth: 95%;
+    --mainWidth: 80%;
+  }
+
+  .sneakerName {
+    font-size: 2.5rem;
+  }
+
+  .InfoAndCart {
+    justify-content: space-between;
+  }
+
+  .InfoAndCart p {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  :root {
+    --navbarWidth: 600px;
+    --mainWidth: 500px;
+  }
+
+  .InfoAndCart {
+    justify-content: center;
+  }
+
+  .ImagesDisplayCloaked {
+    width: 100%;
+  }
+
+  .InfoAndCart p {
+    display: block;
+  }
+
+  .Main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navButtons {
+    display: none;
+  }
+
+  .InfoAndCart {
+    width: 100%;
+    align-items: center;
+  }
+
+  .ImagesDisplay {
+    width: 100%;
+    margin-bottom: 75px;
+  }
+
+  .sneakerComp {
+    text-align: center;
+  }
+
+  .cartFunctionality {
+    justify-content: center;
+  }
+
+  .InfoAndCart p {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --navbarWidth: 95%;
+    --mainWidth: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  :root {
+    --navbarWidth: 360px;
+    --mainWidth: 340px;
+    --buyButtonWidth: 160px;
+    --amountContWidth: 80px;
+  }
+
+  .Main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navButtons {
+    display: none;
+  }
+
+  .InfoAndCart {
+    width: 100%;
+    align-items: center;
+  }
+
+  .ImagesDisplay {
+    width: 100%;
+    margin-bottom: 75px;
+  }
+
+  .sneakerName {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .sneakerComp {
+    text-align: center;
+  }
+
+  .cartFunctionality {
+    justify-content: center;
+  }
+
+  .InfoAndCart p {
+    width: 90%;
+  }
+
+}
